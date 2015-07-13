@@ -13,9 +13,28 @@
  *= require_tree .
  *= require_self
  *= require foundation_and_overrides
-
  */
 .cancel {
   text-align: center;
+}
 
+body {
+  background-image: image_url("");
+  background-position: center top;
+  background-position: 0 45px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.welcome {
+  background: rgba(255, 255, 255, 0.5);
+  padding: 10px;
+}
+
+.footer {
+  background-color: #333333;
+  bottom: 0;
+  color: #ffffff;
+  position: fixed;
+  width: 100%;
 }
