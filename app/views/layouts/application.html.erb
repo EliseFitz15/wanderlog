@@ -37,13 +37,7 @@
 
   <%= yield %>
 
-  <div class="footer">
-    <div class="container">
-      <p>Created by Elise Fitzgerald</p>
-      <p>Logo Design by </p>
-    </div>
-  </div>
-  <%= yield :extra_footer %>
   <%= javascript_include_tag 'application' %>
+  <%= yield :extra_footer %>
 </body>
 </html>
