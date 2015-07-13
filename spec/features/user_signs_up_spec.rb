@@ -1,4 +1,4 @@
-require 'rails_helper'
+require "rails_helper"
 
 feature 'user registers', %Q{
   As a visitor
@@ -15,7 +15,7 @@ feature 'user registers', %Q{
   scenario 'provide valid registration information' do
     visit new_user_registration_path
 
-    fill_in 'Name', with: 'Charlotte'
+    fill_in "Name", with: "Charlotte"
     fill_in 'Email', with: 'john@example.com'
     fill_in 'Password', with: 'password'
     fill_in 'Password confirmation', with: 'password'
