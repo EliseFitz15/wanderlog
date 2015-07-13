@@ -1,9 +1,25 @@
 <h1 align="center"><%= "#{@user.name}'s Trips" %></h1>
 
+<h3 align="center">Upcoming Trips</h3>
+
 <div class="row">
   <% @trips.each do |trip| %>
-    <ul class="users-future-trips">
-      <li>
+    <ul class="small-2 large-4 columns">
+      <li class="future-trips">
+        <p><%= trip.title %></p>
+        <p><%= trip.description %></p>
+        <p><%= trip.startdate %></p>
+      </li>
+    </ul>
+  <% end %>
+</div>
+
+<h3 align="center">Past Trips</h3>
+
+<div class="row">
+  <% @trips.each do |trip| %>
+    <ul class="small-2 large-4 columns">
+      <li class="past-trips">
         <p><%= trip.title %></p>
         <p><%= trip.description %></p>
         <p><%= trip.startdate %></p>

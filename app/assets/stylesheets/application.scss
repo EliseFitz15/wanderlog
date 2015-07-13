@@ -14,16 +14,16 @@
  *= require_self
  *= require foundation_and_overrides
  */
-.cancel {
-  text-align: center;
-}
-
 body {
   background-image: image_url("");
   background-position: center top;
   background-position: 0 45px;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.cancel {
+  text-align: center;
 }
 
 .welcome {
