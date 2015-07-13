@@ -12,7 +12,6 @@ So that I can keep my profile up to date" do
     email_update = "newuseremail@email.com"
     visit "/"
     click_link("Sign In")
-    fill_in "Name", with: user.name
     fill_in "Email", with: user.email
     fill_in "Password", with: user.password
     click_button("Log in")
