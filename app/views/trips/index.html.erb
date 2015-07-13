@@ -1,0 +1,13 @@
+<h1 align="center"><%= "#{@user.name}'s Trips" %></h1>
+
+<div class="row">
+  <% @trips.each do |trip| %>
+    <ul class="users-future-trips">
+      <li>
+        <p><%= trip.title %></p>
+        <p><%= trip.description %></p>
+        <p><%= trip.startdate %></p>
+      </li>
+    </ul>
+  <% end %>
+</div>
