@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root 'homes#index'
   get '/about' => 'homes#about'
   get '/wander' => 'homes#wander'
+  resources :trips, only: [:index]
 
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.

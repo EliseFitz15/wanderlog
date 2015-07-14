@@ -7,5 +7,11 @@ FactoryGirl.define do
     password "password"
     password_confirmation "password"
   end
+  factory :trip do
+    user
+    title "Adventures in P-town"
+    description "2015 Annual trip to Provincetown Mass."
+    sequence(:startdate) { |n| "2015-07-#{n}" }
+  end
 
 end
