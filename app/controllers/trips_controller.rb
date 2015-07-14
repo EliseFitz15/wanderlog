@@ -5,7 +5,7 @@ class TripsController < ApplicationController
     # @futuretrips = @user.trips.where(:startdate.past? == false)
   end
 
-protected
+  protected
 
   def trip_params
     params.require(:trip).permit(:title, :description, :startdate, :user_id)

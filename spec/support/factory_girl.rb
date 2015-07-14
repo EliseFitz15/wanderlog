@@ -11,7 +11,7 @@ FactoryGirl.define do
     user
     title "Adventures in P-town"
     description "2015 Annual trip to Provincetown Mass."
-    sequence(:startdate) {|n| "2015-07-#{n}" }
+    sequence(:startdate) { |n| "2015-07-#{n}" }
   end
 
 end
