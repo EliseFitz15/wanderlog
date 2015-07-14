@@ -20,7 +20,7 @@ so that I can log my travel adventures in one place" do
 
     visit trips_path
 
-    click_link "Add New Trip"
+    click_link "new-trip"
     expect(page).to have_content("Where will you wander?")
 
     fill_in "Title", with: trip.title
@@ -46,7 +46,7 @@ so that I can log my travel adventures in one place" do
 
     visit trips_path
 
-    click_link "Add New Trip"
+    click_link "new-trip"
     expect(page).to have_content("Where will you wander?")
 
     click_button "Create Trip"

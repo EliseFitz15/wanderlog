@@ -1,6 +1,7 @@
 <h1 align="center"><%= "#{@user.name}'s Trips" %></h1>
 
-<%= link_to "Add New Trip", new_trip_path %>
+<%= link_to image_tag("World-point.png"),
+new_trip_path, id: "new-trip", method: :get %>
 
 <h3 align="center">Upcoming Trips</h3>
 

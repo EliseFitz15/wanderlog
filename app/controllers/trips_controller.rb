@@ -43,6 +43,12 @@ class TripsController < ApplicationController
     end
   end
 
+  def destroy
+    @trip = Trip.find(params[:id]).destroy
+    flash[:notice] = "Trip Deleted"
+    redirect_to trips_path
+  end
+
   protected
 
   def trip_params
