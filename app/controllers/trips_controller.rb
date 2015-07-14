@@ -7,8 +7,7 @@ class TripsController < ApplicationController
 
 protected
 
-def trip_params
-  params.require(:trip).permit(:title, :description, :startdate, :user_id)
-end
-
+  def trip_params
+    params.require(:trip).permit(:title, :description, :startdate, :user_id)
+  end
 end
