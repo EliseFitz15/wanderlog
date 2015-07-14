@@ -1,8 +1,8 @@
 require "rails_helper"
 
 # Acceptance Criteria
-# [] User logs in and sees dashboard of their trips
-# [] Dashboard will show future and past trips ordered by time
+# [√] User logs in and sees dashboard of their trips
+# [√] Dashboard will show future and past trips ordered by time
 
 feature "As a logged in user,
 I want to see a dashboard of my trips

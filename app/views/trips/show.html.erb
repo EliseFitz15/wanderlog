@@ -1,0 +1,12 @@
+
+  <div class="small-6 small-offset-2 large-12 columns">
+    <div class="container">
+      <h1><%= @trip.title %></h1>
+      <h3><%= @trip.description %></h3>
+      <h6><%= @trip.startdate %></h6>
+    <%= link_to image_tag("ic_mode_edit.png"),
+    edit_trip_path(@trip), id: "edit-trip", method: :get %>
+    <%= link_to image_tag("ic_delete.png"),
+    trip_path(@trip), id: "delete-post", method: :delete %>
+    </div>
+  </div>
