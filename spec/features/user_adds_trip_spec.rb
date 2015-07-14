@@ -35,7 +35,6 @@ so that I can log my travel adventures in one place" do
   end
   scenario "user tries to create trip unsuccessfully" do
     user = FactoryGirl.create(:user)
-    trip = FactoryGirl.create(:trip, user: user)
 
     visit new_user_session_path
 
