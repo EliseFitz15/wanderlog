@@ -1,0 +1,9 @@
+
+  <div class="small-6 small-offset-2 large-12 columns">
+    <div class="container">
+      <h1><%= @trip.title %></h1>
+      <h3><%= @trip.description %></h3>
+      <h6><%= @trip.startdate %></h6>
+    <%= button_to "Edit", edit_trip_path(@trip), class: "button", method: :get %>
+    </div>
+  </div>

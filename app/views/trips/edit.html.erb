@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="small-6 small-offset-3 columns">
+    <h1 class="header">Update Trip Details</h1>
+    <%= form_for @trip do |f| %>
+
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+
+      <%= f.label :description %>
+      <%= f.text_area :description %>
+
+      <%= f.label :startdate %>
+      <%= f.date_field :startdate %>
+
+      <%= f.submit "Update" %>
+
+    <% end %>
+  </div>
+</div>

@@ -8,7 +8,7 @@
   <% @trips.each do |trip| %>
     <ul class="small-2 large-4 columns">
       <li class="future-trips">
-        <p><%= trip.title %></p>
+        <p><%= link_to trip.title, trip_path(trip) %></p>
         <p><%= trip.description %></p>
         <p><%= trip.startdate %></p>
       </li>
