@@ -13,7 +13,8 @@ class ApplicationController < ActionController::Base
         :email,
         :password,
         :password_confirmation,
-        :remember_me
+        :remember_me,
+        :profile_photo
       )
     end
     devise_parameter_sanitizer.for(:sign_in) do |u|
@@ -31,7 +32,8 @@ class ApplicationController < ActionController::Base
         :email,
         :password,
         :password_confirmation,
-        :current_password
+        :current_password,
+        :profile_photo
       )
     end
   end

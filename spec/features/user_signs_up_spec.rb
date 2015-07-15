@@ -1,4 +1,4 @@
-require "rails_helper"
+require 'rails_helper'
 
 feature 'user registers', %Q{
   As a visitor
@@ -15,15 +15,17 @@ feature 'user registers', %Q{
   scenario 'provide valid registration information' do
     visit new_user_registration_path
 
-    fill_in "Name", with: "Charlotte"
     fill_in 'Email', with: 'john@example.com'
     fill_in 'Password', with: 'password'
     fill_in 'Password confirmation', with: 'password'
+    attach_file "Profile Photo",
+      "#{Rails.root}/spec/support/images/user.png"
 
     click_button 'Sign up'
 
     expect(page).to have_content('Welcome! You have signed up successfully.')
     expect(page).to have_content('Sign Out')
+    expect(page).to have_css("img[src*='user.png']")
   end
 
   scenario 'provide invalid registration information' do
