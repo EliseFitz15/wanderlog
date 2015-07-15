@@ -1,10 +1,10 @@
 require 'rails_helper'
 
 # Acceptence Criteria
-# [] I can navigate to an update page for post
-# [] The post is populated with current information
-# [] I can change previous content
-# [] The new information persists to the database
+# [√] I can navigate to an update page for post
+# [√] The post is populated with current information
+# [√] I can change previous content
+# [√] The new information persists to the database
 
 feature "As an authenticated user
 I want to update my trips details
@@ -21,7 +21,7 @@ So that I can keep my trip up to date" do
     fill_in 'Password', with: user.password
     click_button('Log in')
 
-    visit trip_post_path(post, trip)
+    visit trip_post_path(trip, post)
     click_link("edit-post")
     fill_in 'Headline', with: headline_update
     click_button 'Update'

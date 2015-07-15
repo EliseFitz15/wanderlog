@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   def show
-    @trip = Trip.find(params[:id])
-    @post = Post.where(trip_id: params[:id])
+    @trip = Trip.find(params[:trip_id])
+    @post = Post.find(params[:id])
   end
 
   def new
@@ -39,6 +39,13 @@ class PostsController < ApplicationController
       flash.now[:alert] = @post.errors.full_messages.join(":( ")
       render :edit
     end
+  end
+
+  def destroy
+    @trip = Trip.find(params[:trip_id])
+    @post = Post.find(params[:id]).destroy
+    flash[:notice] = "Post Deleted"
+    redirect_to trip_path(@trip)
   end
 
   def post_params
