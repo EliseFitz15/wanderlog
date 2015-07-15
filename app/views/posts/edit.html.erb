@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="small-6 small-offset-3 columns">
+    <h1 class="header">Update Post</h1>
+    <%= form_for [@trip, @post] do |f| %>
+
+      <%= f.label :headline %>
+      <%= f.text_field :headline %>
+
+      <%= f.label :content %>
+      <%= f.text_area :content %>
+
+      <%= f.submit "Update" %>
+
+    <% end %>
+  </div>
+</div>

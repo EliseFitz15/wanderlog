@@ -1,0 +1,13 @@
+<div class="small-6 small-offset-2 columns">
+  <div class="container">
+    <% @post.each do |post| %>
+    <h4><%= post.headline %></h4>
+    <h6><%= post.updated_at %></h6>
+    <p><%= post.content %></p>
+    <%= link_to image_tag("edit-pencil.png"),
+    edit_trip_post_path(@trip, post), id: "edit-post", method: :get %>
+    <% end %>
+
+
+  </div>
+</div>
