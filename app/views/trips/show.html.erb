@@ -1,4 +1,3 @@
-
   <div class="small-6 small-offset-2 large-12 columns">
     <div class="container">
       <h1><%= @trip.title %></h1>
@@ -7,6 +6,25 @@
     <%= link_to image_tag("ic_mode_edit.png"),
     edit_trip_path(@trip), id: "edit-trip", method: :get %>
     <%= link_to image_tag("ic_delete.png"),
-    trip_path(@trip), id: "delete-post", method: :delete %>
+    trip_path(@trip), id: "delete-trip", method: :delete %>
     </div>
   </div>
+
+<ul class="four side-nav">
+  <li class="active"><%= link_to image_tag("Journal.png"),
+  new_trip_post_path(@trip), id: "new-post", method: :get %></li>
+  <li><a href="#">Link 2</a></li>
+  <li class="divider"></li>
+  <li><a href="#">Link 3</a></li>
+  <li><a href="#">Link 4</a></li>
+</ul>
+
+<div class="small-6 small-offset-2 large-12 columns">
+  <div class="container">
+    <% @posts.each do |post| %>
+    <h4><%= link_to post.headline, trip_post_path(@trip, post) %></h4>
+    <h6><%= post.created_at %></h6>
+    <p><%= post.content %></p>
+    <% end %>
+  </div>
+</div>
