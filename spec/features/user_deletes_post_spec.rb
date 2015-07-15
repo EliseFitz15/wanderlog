@@ -1,8 +1,8 @@
 require "rails_helper"
 
 # Acceptance Criteria
-# [] There is a delete button on the post show page
-# [] I can click the button to delete
+# [√] There is a delete button on the post show page
+# [√] I can click the button to delete
 # [] I am prompted when I try to delete a post, to verify decision
 
 feature "As an logged in user
