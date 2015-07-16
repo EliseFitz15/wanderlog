@@ -36,6 +36,8 @@ FactoryGirl.define do
 
   factory :album do
     trip
-    photos ["test1.jpg","test2.jpg", "test3.jpg"]
+    photos ["/spec/support/images/test1.jpg",
+      "/spec/support/images/test2.jpg",
+      "/spec/support/images/test3.jpg"]
   end
 end

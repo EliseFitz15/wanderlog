@@ -4,10 +4,10 @@
       <%= form_for [@trip, @album] do |f| %>
 
         <%= f.label :photos, "Photos" %>
-        <%= f.file_field :photos, multiple: true %>
+        <%= f.file_field :files, multiple: true %>
 
-      <%= f.submit "Upload Photos" %>
+        <%= f.submit "Upload Photos" %>
 
-    <% end %>
+      <% end %>
   </div>
 </div>
