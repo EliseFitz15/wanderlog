@@ -33,4 +33,9 @@ FactoryGirl.define do
     ne, duo ei duis congue repudiandae. Qui id enim tota prodesset. Ponderum
     patrioque duo te. Autem erant nostrud ea qui, graece inermis volumus nec."
   end
+
+  factory :album do
+    trip
+    photos ["test1.jpg","test2.jpg", "test3.jpg"]
+  end
 end

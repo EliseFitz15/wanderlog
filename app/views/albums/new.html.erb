@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="small-6 small-offset-3 columns">
+    <h1 class="header">Add Photos</h1>
+      <%= form_for [@trip, @album] do |f| %>
+
+        <%= f.label :photos, "Photos" %>
+        <%= f.file_field :photos, multiple: true %>
+
+      <%= f.submit "Upload Photos" %>
+
+    <% end %>
+  </div>
+</div>

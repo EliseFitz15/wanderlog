@@ -11,10 +11,12 @@
   </div>
 
 <ul class="four side-nav">
-  <li class="active"><%= link_to image_tag("Journal.png"),
-  new_trip_post_path(@trip), id: "new-post", method: :get %></li>
-  <li><a href="#">Link 2</a></li>
-  <li class="divider"></li>
+  <li class="active">
+    <%= link_to image_tag("Journal.png"), new_trip_post_path(@trip), id: "new-post", method: :get %>
+  </li>
+  <li>
+    <%= link_to image_tag("album.png"), new_trip_album_path(@trip), id: "new-album", method: :get %>
+  </li>
   <li><a href="#">Link 3</a></li>
   <li><a href="#">Link 4</a></li>
 </ul>

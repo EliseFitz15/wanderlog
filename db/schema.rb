@@ -11,10 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150715211634) do
+ActiveRecord::Schema.define(version: 20150716001819) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "albums", force: :cascade do |t|
+    t.integer "trip_id"
+    t.text    "photos",  default: [], array: true
+  end
 
   create_table "posts", force: :cascade do |t|
     t.integer  "trip_id"
