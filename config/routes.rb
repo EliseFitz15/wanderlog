@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   resources :trips do
     resources :posts, except: [:index]
   end
+  resources :trips do
+    resources :albums, only: [:new, :create]
+  end
 
   devise_for :users
 end

@@ -19,8 +19,6 @@ so that I can journal about my trip" do
 
     click_button 'Log in'
 
-    click_link "Dashboard"
-
     visit trip_path(trip)
 
     click_link "new-post"
