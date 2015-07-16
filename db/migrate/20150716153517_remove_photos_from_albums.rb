@@ -4,6 +4,6 @@ class RemovePhotosFromAlbums < ActiveRecord::Migration
   end
 
   def down
-    add_column :albums, :photos, :text, array: true, default:[]
+    add_column :albums, :photos, :text, array: true, default: []
   end
 end

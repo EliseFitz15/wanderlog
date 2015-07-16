@@ -11,7 +11,6 @@ so that I have them organized by trip" do
   scenario "user adds successfully" do
     user = FactoryGirl.create(:user)
     trip = FactoryGirl.create(:trip, user: user)
-    ablum = FactoryGirl.create(:album, trip: trip)
 
     visit new_user_session_path
     fill_in 'Email', with: user.email

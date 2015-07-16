@@ -3,6 +3,6 @@ class Album < ActiveRecord::Base
 
   validates :trip, presence: true
   validates :photos, presence: true
-  
+
   mount_uploaders :photos, PhotoUploader
 end
