@@ -11,7 +11,7 @@
   </div>
 
 
-    <ul class="four side-nav">
+    <ul>
       <li>
         <%= link_to image_tag("openbook.png", id: "icon"), new_trip_post_path(@trip), id: "new-post", method: :get %>
       </li>
@@ -34,10 +34,9 @@
   </div>
 </div>
 
-
   <% @albums.each do |album| %>
-    <div><%= image_tag(album.photos[0]) %></div>
+    <!-- <div><%= image_tag(album.photos[0]) %></div> -->
     <div><%= image_tag(album.photos[1]) %></div>
-    <div><%= image_tag(album.photos[2]) %></div>
-    <div><%= image_tag(album.photos[3]) %></div>
+    <!-- <div><%= image_tag(album.photos[2]) %></div> -->
+    <!-- <div><%= image_tag(album.photos[3]) %></div> -->
   <% end %>
