@@ -10,7 +10,6 @@
     </div>
   </div>
 
-
     <ul>
       <li>
         <%= link_to image_tag("openbook.png", id: "icon"), new_trip_post_path(@trip), id: "new-post", method: :get %>
@@ -23,20 +22,10 @@
       </li>
     </ul>
 
-
-<div class="small-6 small-offset-2 columns">
-  <div class="panel">
-    <% @posts.each do |post| %>
-    <h4><%= link_to post.headline, trip_post_path(@trip, post) %></h4>
-    <h6><%= post.created_at %></h6>
-    <p><%= post.content %></p>
+    <% @sorted_posts.each do |entry| %>
+        <% if entry.class == Post %>
+          <%= render partial: "post", locals: { entry: entry } %>
+        <% elsif entry.class == Album %>
+          <%= render partial: "album", locals: { entry: entry }%>
+        <% end %>
     <% end %>
-  </div>
-</div>
-
-  <% @albums.each do |album| %>
-    <div class="trip-pics"><%= image_tag(album.photos[0]) %></div>
-    <div class="trip-pics"><%= image_tag(album.photos[1]) %></div>
-    <div class="trip-pics"><%= image_tag(album.photos[2]) %></div>
-    <div class="trip-pics"><%= image_tag(album.photos[3]) %></div>
-  <% end %>
