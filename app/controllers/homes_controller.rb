@@ -4,4 +4,8 @@ class HomesController < ApplicationController
 
   def about
   end
+
+  def wander
+    @trips = Trip.all
+  end
 end
