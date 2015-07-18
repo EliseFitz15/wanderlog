@@ -35,8 +35,8 @@ body {
 }
 
 footer {
-  bottom: 0;
   background-color: $darkslategrey;
+  bottom: 0;
   color: #ffffff;
 }
 
@@ -49,22 +49,23 @@ footer {
 }
 
 .top-bar-section img {
-  width: 3.5em;
-  max-height: 3.5em;
+  background: inherit;
   float: right;
   margin-top: 7px;
-  margin-right: 0px;
-  background: inherit;
+  margin-right: 0;
+  max-height: 3.5em;
+  width: 3.5em;
 }
 // Footer
-html, body {
+html,
+body {
 	height: 100%;
 }
 
 .page-wrap {
+	margin-bottom: -142px;
   min-height: 100%;
   /* equal to footer height */
-	margin-bottom: -142px;
 }
 
 .page-wrap:after {
@@ -72,9 +73,9 @@ html, body {
   display: block;
 }
 
-.site-footer, .page-wrap:after {
-  /* .push must be the same height as footer */
-	height: 142px;
+.site-footer,
+.page-wrap:after {
+  height: 142px;
 }
 
 .site-footer {
@@ -86,8 +87,8 @@ html, body {
 }
 
 .large-4 {
-  background:rgba(255,255,255,0.5);
   border: 5px solid $mediumaquamarine;
+  background:rgba(255, 255, 255, 0.5);
 }
 
 .panel {
@@ -102,5 +103,5 @@ html, body {
 }
 
 .trip-pics img {
-  width: 250px
+  width: 250px;
 }
