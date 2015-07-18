@@ -24,8 +24,8 @@
     </ul>
 
 
-<div class="small-6 small-offset-2 large-12 columns">
-  <div class="container">
+<div class="small-6 small-offset-2 columns">
+  <div class="panel">
     <% @posts.each do |post| %>
     <h4><%= link_to post.headline, trip_post_path(@trip, post) %></h4>
     <h6><%= post.created_at %></h6>
@@ -35,8 +35,8 @@
 </div>
 
   <% @albums.each do |album| %>
-    <!-- <div><%= image_tag(album.photos[0]) %></div> -->
-    <div><%= image_tag(album.photos[1]) %></div>
-    <!-- <div><%= image_tag(album.photos[2]) %></div> -->
-    <!-- <div><%= image_tag(album.photos[3]) %></div> -->
+    <div class="trip-pics"><%= image_tag(album.photos[0]) %></div>
+    <div class="trip-pics"><%= image_tag(album.photos[1]) %></div>
+    <div class="trip-pics"><%= image_tag(album.photos[2]) %></div>
+    <div class="trip-pics"><%= image_tag(album.photos[3]) %></div>
   <% end %>
