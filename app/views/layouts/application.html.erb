@@ -7,62 +7,64 @@
 </head>
 <body>
 
-  <nav class="top-bar">
-    <ul class="title-area">
-      <li class="name">
-        <h1><a href="/">Wanderlog</a></h1>
-      </li>
-    </ul>
+<nav class="top-bar">
+  <ul class="title-area">
+    <li class="name">
+      <%= link_to image_tag("logo-final.png"), '/' %></h1>
+    </li>
+  </ul>
 
-    <section class="top-bar-section">
-      <ul class="right">
-        <li><%= link_to 'About', '/about' %></li>
-        <li><%= link_to 'Wander', '/wander' %></li>
-        <%- if current_user -%>
-          <li><%= link_to 'Dashboard', trips_path %></li>
-          <%- if current_user.profile_photo.file == nil -%>
-          <li><%= link_to image_tag("user.png"), edit_user_registration_path, id: "edit-profile" %></li>
-          <%- else -%>
-          <li><%= link_to image_tag(current_user.profile_photo), edit_user_registration_path, id: "edit-profile" %></li>
-        <%- end -%>
-          <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+  <section class="top-bar-section">
+    <ul class="right">
+        <li><%= link_to "About", '/about' %></li>
+      <%- if current_user -%>
+        <li><%= link_to 'Dashboard', trips_path %></li>
+        <%- if current_user.profile_photo.file == nil -%>
+        <li><%= link_to image_tag("user.png"), edit_user_registration_path, id: "edit-profile" %></li>
         <%- else -%>
-          <li><%= link_to 'Sign Up', new_user_registration_path %></li>
-          <li><%= link_to 'Sign In', new_user_session_path %></li>
-        <%- end -%>
-      </ul>
-    </section>
-  </nav>
+        <li><%= link_to image_tag(current_user.profile_photo), edit_user_registration_path, id: "edit-profile" %></li>
+      <%- end -%>
+        <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+      <%- else -%>
+        <li><%= link_to 'Sign Up', new_user_registration_path %></li>
+        <li><%= link_to 'Sign In', new_user_session_path %></li>
+      <%- end -%>
+    </ul>
+  </section>
+</nav>
 
   <%- flash.each do |key, value| -%>
     <div class="flash flash-<%= key %>">
       <%= value %>
     </div>
   <%- end -%>
+
   <div class="page-wrap">
-
-  <%= yield %>
-
+    <%= yield %>
   </div>
 
-  <footer class="site-footer">
-       <div class="large-12 columns">
-         <hr/>
-         <div class="row">
-           <div class="large-6 columns">
-             <p>© Copyright Elise Fitzgerald. Logo design Kayla Fitzgerald.</p>
-           </div>
-           <div class="large-6 columns">
-             <ul class="inline-list right">
-              <li><%= link_to image_tag("GitHub.png"), "https://github.com/EliseFitz15" %></li>
-              <li><%= link_to image_tag("LinkedIn.png"), "https://www.linkedin.com/in/elisefitzgerald15" %></li>
-             </ul>
-           </div>
-         </div>
-       </div>
-     </footer>
+<footer class="site-footer">
+ <div class="large-12 columns">
+   <hr/>
+   <div class="row">
+     <div class="large-6 columns">
+       <ul class="inline-list left">
+        <li>©Copyright Elise Fitzgerald.</li>
+        <li>Logo design Kayla Fitzgerald.</li>
+       </ul>
+     </div>
+     <div class="large-6 columns">
+       <ul class="inline-list right">
+        <li><%= link_to image_tag("GitHub.png"), "https://github.com/EliseFitz15" %></li>
+        <li><%= link_to image_tag("LinkedIn.png"), "https://www.linkedin.com/in/elisefitzgerald15" %></li>
+       </ul>
+     </div>
+   </div>
+ </div>
+</footer>
+
   <%= yield :extra_footer %>
   <%= javascript_include_tag 'application' %>
-  <%= javascript_include_tag 'portamento' %>
+  <%= javascript_include_tag 'masonry.pkgd' %>
 </body>
 </html>

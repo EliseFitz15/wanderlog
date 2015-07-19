@@ -1,7 +1,5 @@
-<div class="small-5 small-offset-2 columns">
-  <div class="panel">
+<div class="post-item">
     <h4><%= link_to entry.headline, trip_post_path(@trip, entry) %></h4>
-    <h6><%= entry.created_at %></h6>
+    <h6><%= entry.created_at.strftime("%b %d, %Y") %></h6>
     <p><%= entry.content %></p>
-  </div>
 </div>

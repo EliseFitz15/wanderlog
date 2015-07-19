@@ -1,22 +1,23 @@
-<h1 align="center"><%= "#{@user.name}'s Trips" %></h1>
+<div class="row">
+  <h1 align="center"><%= "#{@user.name}'s Trips" %></h1>
 
-<%= link_to image_tag("World-point.png"),
-new_trip_path, id: "new-trip", method: :get %>
+  <div class="new-trip-button right"><%= link_to image_tag("World-point.png"),
+  new_trip_path, id: "new-trip", method: :get %></div>
+</div>
 
-<iframe frameborder="0" id="mapjam-iframe" src="//embeds.mapjam.com/v2/map-embed.html?app_url=http://mapjam.com/&cdn_url=//mapjamjson.global.ssl.fastly.net/&map_id=pearsonedtech&map_width=800px&map_height=600px&container=mapjam-1&domain=mapjam.com&disableClusteringAtZoom=1" style="width: 800px;height: 600px;">
-</iframe>
+<div class="row">
+  <h2 align="center"> Maps going to go here </h2>
+</div>
 
 <h3 align="center">Upcoming Trips</h3>
 
 <div class="row">
   <% @trips.each do |trip| %>
-    <ul class="small-2 large-4 columns">
-      <li class="future-trips">
-        <p><%= link_to trip.title, trip_path(trip) %></p>
-        <p><%= trip.description %></p>
-        <p><%= trip.startdate %></p>
-      </li>
-    </ul>
+    <div class="trip-item">
+        <h4><%= link_to trip.title, trip_path(trip) %></h4>
+        <h6><%= trip.description %></h6>
+        <p><%= trip.startdate.strftime("%b %d, %Y") %></p>
+    </div>
   <% end %>
 </div>
 
@@ -24,12 +25,11 @@ new_trip_path, id: "new-trip", method: :get %>
 
 <div class="row">
   <% @trips.each do |trip| %>
-    <ul class="small-2 large-4 columns">
-      <li class="past-trips">
-        <p><%= trip.title %></p>
-        <p><%= trip.description %></p>
-        <p><%= trip.startdate %></p>
-      </li>
-    </ul>
+    <div class="trip-item">
+        <!-- Add a trip photo -->
+        <h4><%= link_to trip.title, trip_path(trip) %></h4>
+        <h6><%= trip.description %></h6>
+        <p><%= trip.startdate.strftime("%b %d, %Y") %></p>
+    </div>
   <% end %>
 </div>

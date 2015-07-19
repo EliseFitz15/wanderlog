@@ -14,6 +14,11 @@
  *= require_self
  *= require foundation_and_overrides
  */
+html,
+body {
+	height: 100%;
+  font-family: sans-serif;
+}
 
 $whitesmoke: #f2f2f2;
 $darkseagreen: #a3d39c;
@@ -22,45 +27,41 @@ $cadetblue: #49aaa5;
 $mediumaquamarine: #7accc8;
 $indianred: #e45e56;
 
-body {
-  background-image: image_url("");
-  background-position: center top;
-  background-position: 0 45px;
-  background-repeat: no-repeat;
-  background-size: cover;
+// Homepage
+.welcome {
+  border: 2px solid $whitesmoke;
+  margin-top: 150px;
+  background:rgba(255, 255, 255, 0.5);
+  height: 300px;
+}
+
+.welcome img {
+  height: 150px;
+}
+
+.trip-main-bar {
+  height: 525px;
+}
+
+.trip-main-bar .image-div {
+  height: auto;
+  width: auto;
+}
+
+.trip-description {
+  margin-top: 50px;
+}
+
+.trip-buttons {
+  float: right;
+  margin-top: 225px;
 }
 
 .cancel {
   text-align: center;
 }
 
-footer {
-  background-color: $darkslategrey;
-  bottom: 0;
-  color: #ffffff;
-}
-
-.top-bar ul li {
-  background: $darkslategrey;
-}
-
-.top-bar a {
-  font-size: 16px;
-}
-
-.top-bar-section img {
-  background: inherit;
-  float: right;
-  margin-top: 7px;
-  margin-right: 0;
-  max-height: 3.5em;
-  width: 3.5em;
-}
 // Footer
-html,
-body {
-	height: 100%;
-}
 
 .page-wrap {
 	margin-bottom: -142px;
@@ -77,14 +78,45 @@ body {
   height: 142px;
 }
 
-.site-footer {
+footer {
+  background-color: $darkslategrey;
+  bottom: 0;
+  color: #ffffff;
+  font-size: 18px;
+}
+
+// Nav
+.top-bar ul li {
   background: $darkslategrey;
 }
 
-#icon {
-  width: 100px;
+.top-bar a {
+  font-size: 16px;
 }
 
+.name img {
+  background: inherit;
+  margin: 10px;
+  height: 70px;
+  width: auto;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+
+.top-bar-section img {
+  background: inherit;
+  float: right;
+  margin-top: 7px;
+  margin-right: 0;
+  max-height: 3.5em;
+  width: 3.5em;
+}
+
+#icon {
+  width: 75px;
+}
+
+// About
 .large-4 {
   border: 5px solid $mediumaquamarine;
   background:rgba(255, 255, 255, 0.5);
@@ -104,4 +136,103 @@ body {
 .trip-pics img {
   width: 250px;
   padding: 5px;
+}
+
+// Masonary
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+
+// Grid
+
+.grid {
+  background: $mediumaquamarine;
+  max-width: 2000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// clearfix
+.grid:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+// Grid-items
+.trip-item {
+  background: $darkseagreen;
+  border: 2px solid #333;
+  border-color: hsla(0, 0%, 0%, 0.5);
+  float: left;
+  height: auto;
+  margin: 10px;
+  padding: 20px;
+  width: 300px;
+}
+
+.post-item h4 {
+  text-align: center;
+}
+
+.album-item {
+  float: right;
+  margin: 10px;
+  max-width: 300px;
+  max-height: 100%;
+}
+
+.album-item-2 {
+  float: left;
+  margin: 10px;
+  max-width: 400px;
+  max-height: 100%;
+}
+
+.album-item-3 {
+  float: left;
+  margin: 10px;
+  max-width: 500px;
+  max-height: 100%;
+}
+
+.album-item-4 {
+  float: left;
+  margin: 10px;
+  max-width: 200px;
+  max-height: 100%;
+}
+
+.post-item {
+  background: rgba(255, 255, 255, 0.5);
+  border: 2px solid #333;
+  border-color: hsla(0, 0%, 0%, 0.5);
+  float: left;
+  height: auto;
+  margin: 10px;
+  padding: 20px;
+  width: 600px;
+}
+// Dashboard
+.new-trip-button {
+	background: rgba(255, 255, 255, 0.5);
+}
+// Trip board
+.weather {
+  background-color: $darkseagreen;
+  height: 200px;
+  width: 50%;
+}
+
+.countdown {
+  background-color: $indianred;
+  height: 200px;
+  width: 50%;
+}
+
+.large-12 {
+  padding-left: 0;
+  padding-right: 0;
 }

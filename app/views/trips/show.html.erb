@@ -1,31 +1,52 @@
-  <div class="small-6 small-offset-2 large-12 columns">
-    <div class="container">
-      <h1><%= @trip.title %></h1>
-      <h3><%= @trip.description %></h3>
-      <h6><%= @trip.startdate %></h6>
-    <%= link_to image_tag("ic_mode_edit.png"),
-    edit_trip_path(@trip), id: "edit-trip", method: :get %>
-    <%= link_to image_tag("ic_delete.png"),
-    trip_path(@trip), id: "delete-trip", method: :delete %>
-    </div>
+<div class="large-12 columns trip-main-bar image-div">
+<style media="screen">
+.image-div { background-image: url(<%= @album.photos[1] %>); }
+</style>
+  <div class="row trip-description">
+    <h1><%= @trip.title %></h1>
+    <h3><%= @trip.description %></h3>
+    <h6><%= @trip.startdate.strftime("%b %d, %Y") %></h6>
   </div>
+    <div class="trip-buttons clearfix">
+      <%= link_to image_tag("edit-pencil.png", id: "icon"),
+      edit_trip_path(@trip), id: "edit-trip", method: :get %>
+      <%= link_to image_tag("trash-delete.png", id: "icon"),
+      trip_path(@trip), id: "delete-trip", method: :delete %>
+      <%= link_to image_tag("openbook.png", id: "icon"), new_trip_post_path(@trip), id: "new-post", method: :get %>
+      <%= link_to image_tag("album.png", id: "icon"), new_trip_album_path(@trip), id: "new-album", method: :get %>
+      <%= link_to image_tag("highlight.png", id: "icon"), trips_path, method: :get %>
+    </div>
+</div>
 
-    <ul>
-        <%= link_to image_tag("openbook.png", id: "icon"), new_trip_post_path(@trip), id: "new-post", method: :get %>
-      <li>
-      </li>
-      <li>
-        <%= link_to image_tag("album.png", id: "icon"), new_trip_album_path(@trip), id: "new-album", method: :get %>
-      </li>
-      <li>
-        <%= link_to image_tag("highlight.png", id: "icon"), trips_path, method: :get %>
-      </li>
-    </ul>
+<div class="large-12 columns">
+  <div class="weather right">
+    <h1> Weather </h1>
+  </div>
+  <div class="countdown left">
+    <h1> Countdown </h1>
+  </div>
+</div>
 
-    <% @sorted_posts.each do |entry| %>
-        <% if entry.class == Post %>
-          <%= render partial: "post", locals: { entry: entry } %>
-        <% elsif entry.class == Album %>
-          <%= render partial: "album", locals: { entry: entry }%>
-        <% end %>
+<div class="grid">
+  <% @sorted_posts.each do |entry| %>
+    <% if entry.class == Post %>
+      <%= render partial: "post", locals: { entry: entry } %>
+    <% elsif entry.class == Album %>
+      <%= render partial: "album", locals: { entry: entry }%>
     <% end %>
+  <% end %>
+</div>
+
+
+
+<script src="text/javascript">
+$(document).ready( function() {
+
+  $('.grid').masonry({
+    itemSelector: '.post-item', 'album-item',
+    columnWidth: '.grid-sizer',
+    percentPosition: true
+  });
+
+});
+</script>
