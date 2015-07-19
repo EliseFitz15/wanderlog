@@ -7,6 +7,7 @@ class TripsController < ApplicationController
 
   def show
     @trip = Trip.find(params[:id])
+    @album = @trip.albums.first
     @entries = [] | @trip.posts | @trip.albums
     @sorted_posts = @entries.sort_by(&:created_at)
   end

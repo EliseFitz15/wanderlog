@@ -4,13 +4,14 @@
   <title>Wanderlog</title>
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= csrf_meta_tags %>
+
 </head>
 <body>
 
   <nav class="top-bar">
     <ul class="title-area">
       <li class="name">
-        <%= link_to image_tag("WandlerlogLogoWhite-03.png"), '/' %></h1>
+        <%= link_to image_tag("logo-final.png"), '/' %></h1>
       </li>
     </ul>
 
@@ -63,6 +64,6 @@
      </footer>
   <%= yield :extra_footer %>
   <%= javascript_include_tag 'application' %>
-  <%= javascript_include_tag 'portamento' %>
+  <%= javascript_include_tag 'masonry.pkgd' %>
 </body>
 </html>
