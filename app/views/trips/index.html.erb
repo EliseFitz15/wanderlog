@@ -12,8 +12,9 @@
 <h3 align="center">Upcoming Trips</h3>
 
 <div class="row">
-  <% @trips.each do |trip| %>
+  <% @future_trips.each do |trip| %>
     <div class="trip-item">
+        <%= image_tag(trip.cover_photo) %>
         <h4><%= link_to trip.title, trip_path(trip) %></h4>
         <h6><%= trip.description %></h6>
         <p><%= trip.startdate.strftime("%b %d, %Y") %></p>
@@ -24,9 +25,9 @@
 <h3 align="center">Past Trips</h3>
 
 <div class="row">
-  <% @trips.each do |trip| %>
+  <% @past_trips.each do |trip| %>
     <div class="trip-item">
-        <!-- Add a trip photo -->
+        <%= image_tag(trip.cover_photo) %>
         <h4><%= link_to trip.title, trip_path(trip) %></h4>
         <h6><%= trip.description %></h6>
         <p><%= trip.startdate.strftime("%b %d, %Y") %></p>

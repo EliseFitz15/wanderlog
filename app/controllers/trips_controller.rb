@@ -2,7 +2,8 @@ class TripsController < ApplicationController
   def index
     @user = current_user
     @trips = @user.trips
-    # @futuretrips = @user.trips.where(:startdate.past? == false)
+    @past_trips = @user.trips.where("startdate < ?", Date.today)
+    @future_trips = @user.trips.where("startdate > ?", Date.today)
   end
 
   def show
@@ -54,6 +55,6 @@ class TripsController < ApplicationController
   protected
 
   def trip_params
-    params.require(:trip).permit(:title, :description, :startdate, :user_id)
+    params.require(:trip).permit(:title, :description, :startdate, :user_id, :cover_photo)
   end
 end
