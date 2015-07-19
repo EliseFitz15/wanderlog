@@ -14,7 +14,6 @@
 <div class="row">
   <% @trips.each do |trip| %>
     <div class="trip-item">
-        <!-- <%= trip.coverphoto %> -->
         <h4><%= link_to trip.title, trip_path(trip) %></h4>
         <h6><%= trip.description %></h6>
         <p><%= trip.startdate.strftime("%b %d, %Y") %></p>
