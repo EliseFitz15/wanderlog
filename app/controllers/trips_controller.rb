@@ -7,8 +7,8 @@ class TripsController < ApplicationController
 
   def show
     @trip = Trip.find(params[:id])
-    @posts = @trip.posts
-    @albums = @trip.albums
+    @entries = [] | @trip.posts | @trip.albums
+    @sorted_posts = @entries.sort_by(&:created_at)
   end
 
   def new
