@@ -14,6 +14,11 @@
  *= require_self
  *= require foundation_and_overrides
  */
+html,
+body {
+	height: 100%;
+  font-family: sans-serif;
+}
 
 $whitesmoke: #f2f2f2;
 $darkseagreen: #a3d39c;
@@ -22,6 +27,7 @@ $cadetblue: #49aaa5;
 $mediumaquamarine: #7accc8;
 $indianred: #e45e56;
 
+// Homepage
 .welcome {
   border: 2px solid $whitesmoke;
   margin-top: 150px;
@@ -30,13 +36,14 @@ $indianred: #e45e56;
 }
 
 .welcome img {
-  height: 150px
+  height: 150px;
 }
+
 .trip-main-bar {
   height: 525px;
 }
 
-.trip-main-bar .image_div {
+.trip-main-bar .image-div {
   height: auto;
   width: auto;
 }
@@ -54,15 +61,31 @@ $indianred: #e45e56;
   text-align: center;
 }
 
+// Footer
+
+.page-wrap {
+	margin-bottom: -142px;
+  min-height: 100%;
+}
+
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+
+.site-footer,
+.page-wrap:after {
+  height: 142px;
+}
+
 footer {
   background-color: $darkslategrey;
   bottom: 0;
   color: #ffffff;
-}
-footer .inline-list {
   font-size: 18px;
 }
 
+// Nav
 .top-bar ul li {
   background: $darkslategrey;
 }
@@ -88,39 +111,17 @@ footer .inline-list {
   max-height: 3.5em;
   width: 3.5em;
 }
-// Footer
-html,
-body {
-	height: 100%;
-}
-
-.page-wrap {
-	margin-bottom: -142px;
-  min-height: 100%;
-}
-
-.page-wrap:after {
-  content: "";
-  display: block;
-}
-
-.site-footer,
-.page-wrap:after {
-  height: 142px;
-}
-
-.site-footer {
-  background: $darkslategrey;
-}
 
 #icon {
-  width: 100px;
+  width: 75px;
 }
 
+// About
 .large-4 {
   border: 5px solid $mediumaquamarine;
   background:rgba(255, 255, 255, 0.5);
 }
+
 .panel {
   margin-top: 5px;
   border-left-width: 50px;
@@ -137,15 +138,14 @@ body {
   padding: 5px;
 }
 
-Masonary
+// Masonary
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-body { font-family: sans-serif; }
 
-/* ---- grid ---- */
+// Grid
 
 .grid {
   background: $mediumaquamarine;
@@ -154,35 +154,23 @@ body { font-family: sans-serif; }
   margin-right: auto;
 }
 
-/* clearfix */
+// clearfix
 .grid:after {
-  content: '';
+  content: "";
   display: block;
   clear: both;
 }
 
-/* ---- grid-item ---- */
-
-.post-item {
-  float: left;
-  margin: 10px;
-  background:rgba(255, 255, 255, 0.5);
-  width: 600px;
-  padding: 20px;
-  height: auto;
-  border: 2px solid #333;
-  border-color: hsla(0, 0%, 0%, 0.5);
-}
-
+// Grid-items
 .trip-item {
-  float: left;
-  margin: 10px;
   background: $darkseagreen;
-  width: 300px;
-  padding: 20px;
-  height: auto;
   border: 2px solid #333;
   border-color: hsla(0, 0%, 0%, 0.5);
+  float: left;
+  height: auto;
+  margin: 10px;
+  padding: 20px;
+  width: 300px;
 }
 
 .post-item h4 {
@@ -190,8 +178,61 @@ body { font-family: sans-serif; }
 }
 
 .album-item {
+  float: right;
+  margin: 10px;
+  max-width: 300px;
+  max-height: 100%;
+}
+
+.album-item-2 {
   float: left;
   margin: 10px;
-  max-width:400px;
-  max-height:100%;
+  max-width: 400px;
+  max-height: 100%;
+}
+
+.album-item-3 {
+  float: left;
+  margin: 10px;
+  max-width: 500px;
+  max-height: 100%;
+}
+
+.album-item-4 {
+  float: left;
+  margin: 10px;
+  max-width: 200px;
+  max-height: 100%;
+}
+
+.post-item {
+  background: rgba(255, 255, 255, 0.5);
+  border: 2px solid #333;
+  border-color: hsla(0, 0%, 0%, 0.5);
+  float: left;
+  height: auto;
+  margin: 10px;
+  padding: 20px;
+  width: 600px;
+}
+// Dashboard
+.new-trip-button {
+	background: rgba(255, 255, 255, 0.5);
+}
+// Trip board
+.weather {
+  background-color: $darkseagreen;
+  height: 200px;
+  width: 50%;
+}
+
+.countdown {
+  background-color: $indianred;
+  height: 200px;
+  width: 50%;
+}
+
+.large-12 {
+  padding-left: 0;
+  padding-right: 0;
 }

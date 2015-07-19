@@ -1,8 +1,8 @@
 <div class="row">
   <h1 align="center"><%= "#{@user.name}'s Trips" %></h1>
 
-  <%= link_to image_tag("World-point.png"),
-  new_trip_path, id: "new-trip", method: :get %>
+  <div class="new-trip-button right"><%= link_to image_tag("World-point.png"),
+  new_trip_path, id: "new-trip", method: :get %></div>
 </div>
 
 <div class="row">
@@ -14,7 +14,7 @@
 <div class="row">
   <% @trips.each do |trip| %>
     <div class="trip-item">
-        <!-- Add a trip photo -->
+        <!-- <%= trip.coverphoto %> -->
         <h4><%= link_to trip.title, trip_path(trip) %></h4>
         <h6><%= trip.description %></h6>
         <p><%= trip.startdate.strftime("%b %d, %Y") %></p>
