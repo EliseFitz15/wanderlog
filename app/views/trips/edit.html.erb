@@ -3,15 +3,23 @@
     <h1 class="header">Update Trip Details</h1>
     <%= form_for @trip do |f| %>
 
-      <%= f.label :title %>
-      <%= f.text_field :title %>
-
-      <%= f.label :description %>
-      <%= f.text_area :description %>
-
-      <%= f.label :startdate %>
-      <%= f.date_field :startdate %>
-
+      <div class="field">
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+      </div>
+      <div class="field">
+        <%= f.label :description %>
+        <%= f.text_area :description %>
+      </div>
+      <div class="field">
+        <%= f.label :startdate %>
+        <%= f.date_field :startdate %>
+      </div>
+      <div class="field">
+        <%= f.label :cover_photo, "Cover Photo" %><br />
+        <%= f.file_field :cover_photo %>
+      </div>
+    
       <%= f.submit "Update" %>
 
     <% end %>
