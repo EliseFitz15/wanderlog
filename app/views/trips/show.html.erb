@@ -1,19 +1,21 @@
-<div class="trip-main-bar large-12 columns image_div">
+<div class="large-12 columns trip-main-bar image_div">
 <style media="screen">
 .image_div { background-image: url(<%= @album.photos[1] %>); }
 </style>
-  <div class="row">
-      <h1><%= @trip.title %></h1>
-      <h3><%= @trip.description %></h3>
-      <h6><%= @trip.startdate.strftime("%b %d, %Y") %></h6>
-    <%= link_to image_tag("edit-pencil.png", id: "icon"),
-    edit_trip_path(@trip), id: "edit-trip", method: :get %>
-    <%= link_to image_tag("trash-delete.png", id: "icon"),
-    trip_path(@trip), id: "delete-trip", method: :delete %>
-    <%= link_to image_tag("openbook.png", id: "icon"), new_trip_post_path(@trip), id: "new-post", method: :get %>
-    <%= link_to image_tag("album.png", id: "icon"), new_trip_album_path(@trip), id: "new-album", method: :get %>
-    <%= link_to image_tag("highlight.png", id: "icon"), trips_path, method: :get %>
+  <div class="row trip-description">
+    <h1><%= @trip.title %></h1>
+    <h3><%= @trip.description %></h3>
+    <h6><%= @trip.startdate.strftime("%b %d, %Y") %></h6>
   </div>
+    <div class="trip-buttons clearfix">
+      <%= link_to image_tag("edit-pencil.png", id: "icon"),
+      edit_trip_path(@trip), id: "edit-trip", method: :get %>
+      <%= link_to image_tag("trash-delete.png", id: "icon"),
+      trip_path(@trip), id: "delete-trip", method: :delete %>
+      <%= link_to image_tag("openbook.png", id: "icon"), new_trip_post_path(@trip), id: "new-post", method: :get %>
+      <%= link_to image_tag("album.png", id: "icon"), new_trip_album_path(@trip), id: "new-album", method: :get %>
+      <%= link_to image_tag("highlight.png", id: "icon"), trips_path, method: :get %>
+    </div>
 </div>
 
 <div class="grid">

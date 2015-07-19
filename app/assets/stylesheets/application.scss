@@ -22,19 +22,32 @@ $cadetblue: #49aaa5;
 $mediumaquamarine: #7accc8;
 $indianred: #e45e56;
 
-body {
-  background-image: image_url("");
-  background-position: center top;
-  background-position: 0 45px;
-  background-repeat: no-repeat;
-  background-size: cover;
+.welcome {
+  border: 2px solid $whitesmoke;
+  margin-top: 150px;
+  background:rgba(255, 255, 255, 0.5);
+  height: 300px;
+}
+
+.welcome img {
+  height: 150px
 }
 .trip-main-bar {
-  height: 550px;
+  height: 525px;
 }
+
 .trip-main-bar .image_div {
   height: auto;
   width: auto;
+}
+
+.trip-description {
+  margin-top: 50px;
+}
+
+.trip-buttons {
+  float: right;
+  margin-top: 225px;
 }
 
 .cancel {
@@ -45,6 +58,9 @@ footer {
   background-color: $darkslategrey;
   bottom: 0;
   color: #ffffff;
+}
+footer .inline-list {
+  font-size: 18px;
 }
 
 .top-bar ul li {
@@ -105,7 +121,6 @@ body {
   border: 5px solid $mediumaquamarine;
   background:rgba(255, 255, 255, 0.5);
 }
-
 .panel {
   margin-top: 5px;
   border-left-width: 50px;
@@ -152,8 +167,18 @@ body { font-family: sans-serif; }
   float: left;
   margin: 10px;
   background:rgba(255, 255, 255, 0.5);
-  // background: $darkseagreen;
   width: 600px;
+  padding: 20px;
+  height: auto;
+  border: 2px solid #333;
+  border-color: hsla(0, 0%, 0%, 0.5);
+}
+
+.trip-item {
+  float: left;
+  margin: 10px;
+  background: $darkseagreen;
+  width: 300px;
   padding: 20px;
   height: auto;
   border: 2px solid #333;
