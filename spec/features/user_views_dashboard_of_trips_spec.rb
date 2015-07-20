@@ -24,7 +24,7 @@ so I can view future and past trips" do
 
     expect(page).to have_content(trip.title)
     expect(page).to have_content(trip.description)
-    expect(page).to have_content(trip.startdate)
+    expect(page).to have_content(trip.startdate.strftime("%b %d, %Y"))
     expect(page).to have_content(trip.user.name)
   end
 end
