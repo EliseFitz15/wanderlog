@@ -18,7 +18,7 @@
 $(function(){ $(document).foundation(); });
 
 var start = document.getElementById('start').innerHTML;
-new CountDownTimer(start, 'countdown');
+CountDownTimer(start, 'countdown');
 
 function CountDownTimer(dt, id)
 {
