@@ -23,7 +23,10 @@
     <h1> Weather </h1>
   </div>
   <div class="countdown left">
-    <h1> Countdown </h1>
+    <h1> Time Until Departure </h1>
+    <div id="countdown">
+      <div id="start"><%= @trip.startdate.strftime("%m/%d/%Y") %></div>
+    </div>
   </div>
 </div>
 
@@ -36,8 +39,6 @@
     <% end %>
   <% end %>
 </div>
-
-
 
 <script src="text/javascript">
 $(document).ready( function() {
