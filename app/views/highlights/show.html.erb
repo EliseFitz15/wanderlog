@@ -1,0 +1,8 @@
+<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@highlight.latitude}%2C#{@highlight.longitude}" %>
+
+<h3>Nearby locations</h3>
+<ul>
+<% for highlight in @highlight.nearbys(10) %>
+  <li><%= link_to highlight.address, highlight %> (<%= highlight.distance.round(2) %> miles)</li>
+<% end %>
+</ul>

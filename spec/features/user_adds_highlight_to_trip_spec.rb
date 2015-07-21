@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 # Acceptance Criteria
-# [] User can naviagte to a page to add a highlight post
+# [√] User can naviagte to a page to add a highlight post
 # [] User can user their location to add latitude, longitude to post
 # [] User will see highlight post on their trip page
 # [] User will see map marker on their trips dashboard
