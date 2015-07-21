@@ -12,9 +12,12 @@
       edit_trip_path(@trip), id: "edit-trip", method: :get %>
       <%= link_to image_tag("trash-delete.png", id: "icon"),
       trip_path(@trip), id: "delete-trip", method: :delete %>
-      <%= link_to image_tag("openbook.png", id: "icon"), new_trip_post_path(@trip), id: "new-post", method: :get %>
-      <%= link_to image_tag("album.png", id: "icon"), new_trip_album_path(@trip), id: "new-album", method: :get %>
-      <%= link_to image_tag("highlight.png", id: "icon"), trips_path, method: :get %>
+      <%= link_to image_tag("openbook.png", id: "icon"),
+      new_trip_post_path(@trip), id: "new-post", method: :get %>
+      <%= link_to image_tag("album.png", id: "icon"),
+      new_trip_album_path(@trip), id: "new-album", method: :get %>
+      <%= link_to image_tag("highlight.png", id: "icon"),
+      new_trip_highlight_path(@trip), id: "new-highlight", method: :get %>
     </div>
 </div>
 

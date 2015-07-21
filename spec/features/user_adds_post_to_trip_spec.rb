@@ -1,8 +1,8 @@
 require "rails_helper"
 
 # Acceptance Criteria
-# [] User navigates to form to create new trip journal post
-# [] User creates journal post and it's added to their trip dashboard
+# [√] User navigates to form to create new trip journal post
+# [√] User creates journal post and it's added to their trip dashboard
 
 feature "As a logged in user
 I want to create a new journal post for a trip

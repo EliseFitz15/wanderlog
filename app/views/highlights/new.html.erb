@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="small-6 small-offset-3 columns">
+    <h1 class="header">Add Highlights to your trip</h1>
+
+    <%= form_for [@trip, @highlight] do |f| %>
+
+    <div class="field">
+      <a href='#' id='geolocate' class='tiny radius button'>Use My Location</a>
+    </div>
+
+    <div class="field">
+      <%= f.number_field :latitude %>
+    </div>
+
+    <div class="field">
+      <%= f.number_field :longitude %>
+    </div>
+
+    <div class="field">
+      <%= f.label :location_name %>
+      <%= f.text_field :location_name %>
+    </div>
+
+    <div class="field">
+      <%= f.label :memory %>
+      <%= f.text_area :memory %>
+    </div>
+
+    <div class="field">
+      <%= f.label :highlight_photo, "Highlight Photo" %><br />
+      <%= f.file_field :highlight_photo %>
+    </div>
+
+      <%= f.submit "Create Highlight" %>
+
+    <% end %>
+  </div>
+</div>

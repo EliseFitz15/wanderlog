@@ -33,4 +33,13 @@ FactoryGirl.define do
     ne, duo ei duis congue repudiandae. Qui id enim tota prodesset. Ponderum
     patrioque duo te. Autem erant nostrud ea qui, graece inermis volumus nec."
   end
+
+  factory :highlight do
+    user
+    trip
+    location_name "Pilgrim Monument"
+    memory "Ventured to the top of the Pilrim Monument to see the view from the tallest place on the tip of Cape Cod. Beautiful view of the bay."
+    latitude 42.0519
+    longitude 70.1886
+  end
 end
