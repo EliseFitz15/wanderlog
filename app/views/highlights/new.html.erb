@@ -5,14 +5,17 @@
     <%= form_for [@trip, @highlight] do |f| %>
 
     <div class="field">
-      <a href='#' id='geolocate' class='tiny radius button'>Use My Location</a>
+      <%= f.label :address %>
+      <%= f.text_field :address %>
     </div>
 
     <div class="field">
+      <%= f.label :latitude %>
       <%= f.number_field :latitude %>
     </div>
 
     <div class="field">
+      <%= f.label :longitude %>
       <%= f.number_field :longitude %>
     </div>
 

@@ -12,7 +12,7 @@ so that I have them organized by trip and in total" do
   scenario "user adds highlight post successfully" do
     user = FactoryGirl.create(:user)
     trip = FactoryGirl.create(:trip, user: user)
-    highlight = FactoryGirl.create(:highlight, trip: trip, user: user)
+    highlight = FactoryGirl.create(:highlight, trip: trip)
 
     visit new_user_session_path
     fill_in 'Email', with: user.email
@@ -22,11 +22,13 @@ so that I have them organized by trip and in total" do
     visit trip_path(trip)
 
     click_link "new-highlight"
-    expect(page).to have_content("Add Highlights to your trip")\
+    expect(page).to have_content("Add Highlights to your trip")
 
-    click_button("Get Current Location")
-    fill_in "Location Name", with: highlight.location_name
-    fill_in "Content", with: highlight.memory
+    fill_in "Address", with: highlight.address
+    fill_in "Latitude", with: highlight.latitude
+    fill_in "Longitude", with: highlight.longitude
+    fill_in "Location name", with: highlight.location_name
+    fill_in "Memory", with: highlight.memory
 
     click_button "Create Highlight"
 
