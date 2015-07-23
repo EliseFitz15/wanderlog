@@ -3,6 +3,8 @@
 <head>
   <title>Wanderlog</title>
   <%= stylesheet_link_tag 'application', media: 'all' %>
+  <%= javascript_include_tag "//maps.google.com/maps/api/js?v=3.13&amp;sensor=false&amp;libraries=geometry" %>
+<%= javascript_include_tag "//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -64,8 +66,8 @@
  </div>
 </footer>
 
-  <%= yield :extra_footer %>
   <%= javascript_include_tag 'application' %>
   <%= javascript_include_tag 'masonry.pkgd' %>
+  <%= yield :extra_footer %>
 </body>
 </html>
