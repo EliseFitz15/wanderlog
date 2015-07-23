@@ -10,8 +10,9 @@
     <div class="trip-buttons clearfix">
       <%= link_to image_tag("edit-pencil.png", id: "icon"),
       edit_trip_path(@trip), id: "edit-trip", method: :get %>
-      <%= link_to image_tag("trash-delete.png", id: "icon"),
-      trip_path(@trip), id: "delete-trip", method: :delete %>
+      <%= link_to image_tag("trash-delete.png", id: "icon"), trip_path(@trip),
+      data: { confirm: "Are you sure you want to delete this?" },
+      id: "delete-trip", method: :delete %>
       <%= link_to image_tag("openbook.png", id: "icon"),
       new_trip_post_path(@trip), id: "new-post", method: :get %>
       <%= link_to image_tag("album.png", id: "icon"),
@@ -39,6 +40,8 @@
       <%= render partial: "post", locals: { entry: entry } %>
     <% elsif entry.class == Album %>
       <%= render partial: "album", locals: { entry: entry }%>
+    <% elsif entry.class == Highlight %>
+      <%= render partial: "highlight", locals: { entry: entry }%>
     <% end %>
   <% end %>
 </div>

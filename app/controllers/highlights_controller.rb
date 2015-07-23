@@ -41,7 +41,40 @@ class HighlightsController < ApplicationController
     end
   end
 
+  def edit
+    @trip = Trip.find(params[:trip_id])
+    @highlight = Highlight.find(params[:id])
+  end
+
+  def update
+    @trip = Trip.find(params[:trip_id])
+    @highlight = Highlight.find(params[:id])
+
+    if @highlight.update(highlight_params)
+      flash[:notice] = "Your post has been updated successfully."
+      redirect_to trip_path(@trip)
+    else
+      flash.now[:alert] = @highlight.errors.full_messages.join(":( ")
+      render :edit
+    end
+  end
+
+  def destroy
+    @trip = Trip.find(params[:trip_id])
+    @highlight = Highlight.find(params[:id]).destroy
+    flash[:notice] = "Highlight Deleted"
+    redirect_to trip_path(@trip)
+  end
+
   def highlight_params
-    params.require(:highlight).permit(:location_name, :memory, :latitude, :longitude, :user_id, :trip_id, :address)
+    params.require(:highlight).permit(
+      :location_name,
+      :memory,
+      :latitude,
+      :longitude,
+      :trip_id,
+      :address,
+      :highlight_photo
+    )
   end
 end

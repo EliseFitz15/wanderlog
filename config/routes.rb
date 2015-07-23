@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     resources :albums, only: [:new, :create]
   end
   resources :trips do
-    resources :highlights, only: [:new, :create, :index, :show]
+    resources :highlights
   end
 
   devise_for :users

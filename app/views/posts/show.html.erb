@@ -3,10 +3,11 @@
     <h4><%= @post.headline %></h4>
     <h6><%= @post.updated_at %></h6>
     <p><%= @post.content %></p>
-    <%= link_to image_tag("edit-pencil.png"),
+    <%= link_to image_tag("edit-pencil.png", id: "icon"),
     edit_trip_post_path(@trip, @post), id: "edit-post", method: :get %>
-    <%= link_to image_tag("ic_delete.png"),
-    trip_post_path(@trip, @post), id: "delete-post", method: :delete %>
-
+    <%= link_to image_tag("trash-delete.png", id: "icon" ),
+    trip_post_path(@trip, @post),
+    data: { confirm: "Are you sure you want to delete this?" },
+    id: "delete-post", method: :delete %>
   </div>
 </div>
