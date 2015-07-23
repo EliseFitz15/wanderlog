@@ -9,7 +9,7 @@ class CreateHighlights < ActiveRecord::Migration
       t.string :memory
       t.string :highlight_photo
 
-      t.timestamps null:false
+      t.timestamps null: false
     end
   end
 end

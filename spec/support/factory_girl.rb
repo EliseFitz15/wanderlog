@@ -37,7 +37,9 @@ FactoryGirl.define do
   factory :highlight do
     trip
     location_name "Pilgrim Monument"
-    memory "Ventured to the top of the Pilrim Monument to see the view from the tallest place on the tip of Cape Cod. Beautiful view of the bay."
+    memory "Ventured to the top of the Pilrim Monument
+    to see the view from the tallest place on the tip
+    of Cape Cod. Beautiful view of the bay."
     address "Pilgrim Monument, Provincetown"
     latitude 42.0519
     longitude 70.1886

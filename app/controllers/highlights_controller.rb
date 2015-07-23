@@ -1,9 +1,9 @@
 class HighlightsController < ApplicationController
   def index
-  @trip = Trip.find(params[:trip_id])
-  @highlight =
+    @trip = Trip.find(params[:trip_id])
+    @highlight =
     if params[:search].present?
-      @highlights = Highlight.near(params[:search], 50, :order => :distance)
+      @highlights = Highlight.near(params[:search], 50, order: :distance)
     else
       @highlights = Highlight.all
     end
