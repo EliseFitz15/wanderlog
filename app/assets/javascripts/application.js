@@ -15,6 +15,7 @@
 //= require foundation
 //= require underscore
 //= require gmaps/google
+//= require masonry.pkgd
 //= require_tree .
 
 

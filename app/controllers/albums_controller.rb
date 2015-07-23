@@ -9,6 +9,7 @@ class AlbumsController < ApplicationController
     @album.photos = params[:album][:files]
     @trip = Trip.find(params[:trip_id])
     @album.trip = @trip
+
     if @album.save
       flash[:notice] = "Album added to your trip!"
       redirect_to trip_path(params[:trip_id])
