@@ -3,7 +3,7 @@ require "rails_helper"
 # Acceptance Criteria
 # [√] There is a delete button on the trip show page
 # [√] I can click the button to delete
-# [] I am prompted when I try to delete a trip, to verify decision
+# [√] I am prompted when I try to delete a trip, to verify decision
 
 feature "As an logged in user
 I want to delete a trip and it's contents
