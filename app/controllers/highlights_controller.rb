@@ -1,19 +1,4 @@
 class HighlightsController < ApplicationController
-  # def index
-  #   @trip = Trip.find(params[:trip_id])
-  #   @highlight =
-  #   if params[:search].present?
-  #     @highlights = Highlight.near(params[:search], 50, order: :distance)
-  #   else
-  #     @highlights = Highlight.all
-  #   end
-  #
-  #   @highlights = Highlight.all
-  #   @hash = Gmaps4rails.build_markers(@highlights) do |highlight, marker|
-  #     marker.lat highlight.latitude
-  #     marker.lng highlight.longitude
-  #   end
-  # end
 
   def show
     @trip = Trip.find(params[:trip_id])
