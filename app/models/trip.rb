@@ -1,8 +1,8 @@
 class Trip < ActiveRecord::Base
   belongs_to :user
-  has_many :posts
-  has_many :albums
-  has_many :highlights
+  has_many :posts, dependent: :destroy
+  has_many :albums, dependent: :destroy
+  has_many :highlights, dependent: :destroy
 
   validates :user, presence: true
   validates :title, presence: true, length: { maximum: 40 }
