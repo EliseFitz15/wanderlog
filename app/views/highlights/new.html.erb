@@ -6,17 +6,17 @@
 
     <div class="field">
       <%= f.label :address %>
-      <%= f.text_field :address %>
+      <%= f.text_field :address, id: "address" %>
     </div>
 
     <div class="field">
       <%= f.label :latitude %>
-      <%= f.number_field :latitude %>
+      <%= f.number_field(:latitude) %>
     </div>
 
     <div class="field">
       <%= f.label :longitude %>
-      <%= f.number_field :longitude %>
+      <%= f.number_field(:longitude) %>
     </div>
 
     <div class="field">
