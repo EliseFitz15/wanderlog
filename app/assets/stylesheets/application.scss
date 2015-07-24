@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  *= require foundation_and_overrides
+
  */
 html,
 body {
@@ -32,11 +33,19 @@ $indianred: #e45e56;
   border: 2px solid $whitesmoke;
   margin-top: 150px;
   background:rgba(255, 255, 255, 0.5);
-  height: 300px;
+  height: 350px;
+	width: 500px;
 }
 
 .welcome img {
   height: 150px;
+	display: block;
+  margin: 15px auto;
+}
+
+.welcome .button {
+	display: block;
+  margin: 15px auto;
 }
 
 .trip-main-bar {
@@ -61,30 +70,24 @@ $indianred: #e45e56;
   text-align: center;
 }
 
-// Footer
+$footer-height: 100px;
 
-.page-wrap {
-	margin-bottom: -142px;
-  min-height: 100%;
-}
-
-.page-wrap:after {
-  content: "";
-  display: block;
-}
-
-.site-footer,
-.page-wrap:after {
-  height: 142px;
+.wrapper {
+  min-height: calc(100% - #{$footer-height});
+	background-image: image_url("turks.jpg");
+	background-size: cover;
+	background-repeat: repeat-y;
+	background-position: center top;
+	background-position: 0px 45px;
 }
 
 footer {
+  height: $footer-height;
+  margin-top: 1em;
   background-color: $darkslategrey;
-  bottom: 0;
+  text-align: center;
   color: #ffffff;
-  font-size: 18px;
 }
-
 // Nav
 .top-bar ul li {
   background: $darkslategrey;
@@ -129,10 +132,6 @@ footer {
   border-color: $whitesmoke;
 }
 
-#slider {
-  margin-top: 15px;
-}
-
 .trip-pics img {
   width: 250px;
   padding: 5px;
@@ -143,7 +142,6 @@ footer {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-
 
 // Grid
 

@@ -9,12 +9,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<div class="wrapper">
 <nav class="top-bar">
   <ul class="title-area">
     <li class="name">
       <%= link_to image_tag("logo-final.png"), '/' %></h1>
     </li>
+    <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
   </ul>
 
   <section class="top-bar-section">
@@ -43,11 +44,10 @@
     </div>
   <%- end -%>
 
-  <div class="page-wrap">
     <%= yield %>
-  </div>
+</div>
 
-<footer class="site-footer">
+<footer>
  <div class="large-12 columns">
    <hr/>
    <div class="row">
