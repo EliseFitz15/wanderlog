@@ -1,5 +1,7 @@
-<div class="row">
-  <div class="welcome">
-    <%= image_tag("W-teal.png") %>
-  </div>
+<div class="welcome row">
+  <%= link_to image_tag("W-teal.png"), '/wander' %>
+    <div class="small-12 columns">
+        <%= link_to 'Sign Up', new_user_registration_path, class: "button" %>
+        <%= link_to 'Sign In', new_user_session_path, class: "button" %>
+    </div>
 </div>
