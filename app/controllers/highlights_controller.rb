@@ -1,4 +1,6 @@
 class HighlightsController < ApplicationController
+  respond_to :html, :js
+
   def show
     @trip = Trip.find(params[:trip_id])
     @highlight = Highlight.find(params[:id])

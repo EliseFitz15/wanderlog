@@ -6,9 +6,10 @@ class Highlight < ActiveRecord::Base
   validates :memory, length: { maximum: 350 }
   validates :latitude, presence: true
   validates :longitude, presence: true
-
+  validates :address, presence: true
+  
   mount_uploader :highlight_photo, PhotoUploader
 
   geocoded_by :address
-  after_validation :geocode, if: :address_changed?
+  after_validation :geocode, if: ->(highlight){ highlight.address.present? and highlight.address_changed? }
 end

@@ -57,3 +57,10 @@ function CountDownTimer(dt, id)
 
    timer = setInterval(showRemaining, 1000);
 }
+// 
+// $(document).ready(){
+//   $("#address").on deselection
+//   auto fill - ajax call that the button
+//   in succuess
+//
+// };
